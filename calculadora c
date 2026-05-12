@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+int main()
+{
+    
+float a, b, resultado;
+int opcao;
+
+printf("Primeiro Número: ");
+scanf("%f", &a);
+
+printf("Segundo Número: ");
+scanf("%f", &b);
+
+printf("\n--Calculadora--");
+printf("\n 1. Soma");
+printf("\n 2. Subtração");
+printf("\n 3. Multiplicação");
+printf("\n 4. Divisão");
+
+
+    
