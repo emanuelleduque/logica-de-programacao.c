@@ -14,29 +14,20 @@ while(opcao != 3){
     printf("\nDigite um número: ");
     scanf("%d", &numero);
 
-if (opcao == 1){
+    if (opcao == 1){
     resultado = numero * 2;
-} else if (opcao == 2){
-    resultado = numero 
+    } else if (opcao == 2){
+    resultado = numero * numero;
+    } else (opcao == 3);{
+    
+    }
+    
+
+    
+
+    printf("\nResultado: %f", resultado);
+    return 0;
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    printf("%f Resultado: ", resultado);
 }
-    
-    
     
     
