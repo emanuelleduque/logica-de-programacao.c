@@ -34,7 +34,7 @@ int main()
 {
 pilha p;
 inicializar(&p);
-push(&p, 10); push(&p, 20);
+push(&p, 10); push(&p, 20); push(&p, 45);
 printf("%d\n", pop(&p)); // 20
 
 return 0;
