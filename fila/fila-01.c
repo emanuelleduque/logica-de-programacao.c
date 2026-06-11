@@ -26,7 +26,7 @@ void enqueue(fila *f, int valor) {
 int dequeue(fila *f) {
     if (estaVazia(f)) return -1;
     int v = f->dados[f->inicio];
-    f->inicio - (f->inicio + 1) % MAX;
+    f->inicio = (f->inicio + 1) % MAX;
     f->tamanho--;
     return v;
 }
@@ -37,13 +37,21 @@ int front(fila *f){
 
 int main()
 {
-fila f; inicializar (&f);
-enqueue(&f, 101); enqueue(&f, 102); enqueue(&103); enqueue(&104);
+fila f; 
+inicializar (&f);
+enqueue(&f, 101); 
+enqueue(&f, 102); 
+enqueue(&f, 103); 
+enqueue(&f, 104);
 printf("%d\n", dequeue(&f));
-enqueue (&103); enqueue (&104); enqueue (&105); enqueue (&106);
+printf("%d\n", dequeue(&f));
+enqueue(&f, 105); 
+enqueue(&f, 106);
 
-while (estaVazia(f))
-    printf("%d\n", dequeue(%f));
+while (!estaVazia(&f)){
+    printf("%d\n", dequeue(&f));
 
-    return 0;
+   
+}
+return 0;
 }
