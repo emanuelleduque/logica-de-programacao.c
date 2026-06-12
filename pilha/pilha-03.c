@@ -32,10 +32,17 @@ int estaCheia(pilha *p){
 }
 void push(pilha *p, int valor){
     if (estaCheia(p)) return;
+
     p->dados[++p->topo] = valor;
 }
 int pop(pilha *p){
     if (estaVazia(p)) return -1;
+
+    return p->dados[p->topo--];
+} 
+int peek(pilha *p){
+    if (estaVazia(p)) return -1;
+    
     return p->dados[p->topo];
 }
 
@@ -44,13 +51,23 @@ int main(){
 int soma = 0;
 int media;
 int valor;
+int vetorAuxiliar[MAX];
 pilha p;
 inicializar (&p);
+
 for (int i=0; i < MAX; i++){
     printf("Escreva até 10 números %d/10: ", i + 1);
     scanf("%d", &valor);
     push(&p, valor);
 }
+printf("\nSequência Original: ");
+
+for (int i=0; i<=MAX; i++){
+    printf("%d", p.dados[i]);
+}
+printf("\nSequência Inversa: ");
+
+
 while (!estaVazia(&p)){
     printf("%d", pop(&p));
 }
