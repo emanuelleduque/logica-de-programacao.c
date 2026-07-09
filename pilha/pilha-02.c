@@ -37,6 +37,9 @@ int main()
     pilha historico; 
     int valor;
 
+    inicializar(&historico);
+    inicializar(&lixeira);
+
         while(opcao != 0){
             printf("----Menu---\n");
             printf("1. Executar Nova Ação\n");
@@ -52,7 +55,7 @@ int main()
             if(opcao ==1){
                 printf("Executar Nova Ação\n");
                 scanf("%d", &valor);
-                pop(&historico, valor);
+                push(&historico, valor);
             }
 
             else if(opcao == 2){
